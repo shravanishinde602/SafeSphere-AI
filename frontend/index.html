@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeSphere AI : Phishing Detection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <div class="bg"></div>
+
+<div class="container">
+  <div class="card">
+    <h1>🛡️ SafeSphere AI</h1>
+    <p class="subtitle">AI-powered phishing detection</p>
+
+    <select id="inputType">
+      <option value="email">📧 Email Content</option>
+      <option value="url">🔗 Website URL</option>
+    </select>
+
+    <textarea
+      id="userInput"
+      placeholder="Paste email content or URL here..."
+    ></textarea>
+
+    <button id="scanBtn">
+      <span id="btnText">Scan</span>
+      <div class="loader hidden"></div>
+    </button>
+
+    <div id="result" class="result hidden"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
