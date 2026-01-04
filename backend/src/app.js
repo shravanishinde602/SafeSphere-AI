@@ -9,8 +9,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/analyze",analyzeRoutes);
 
-app.get("/health",(req,res)=> {
-    res.json({status: "SafeSphere AI backend is running"});
+app.get("/",(req,res)=> {
+    res.json({status:"OK" ,
+        message: "SafeSphere AI backend is running"});
 
 });
 
