@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/api/analyze",analyzeRoutes);
 
 app.get("/health",(req,res)=> {
-    res.json({status: "PhishIQ backend is running"});
+    res.json({status: "SafeSphere AI backend is running"});
 
 });
 
