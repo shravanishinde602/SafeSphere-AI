@@ -5,6 +5,8 @@ const userInput = document.getElementById("userInput");
 const btnText = document.getElementById("btnText");
 const loader = document.querySelector(".loader");
 
+const API_URL = "https://safesphere-ai.onrender.com/api/analyze" ;
+
 scanBtn.addEventListener("click", async () => {
   const inputValue = userInput.value.trim();
   if (!inputValue) {
@@ -19,7 +21,7 @@ scanBtn.addEventListener("click", async () => {
   scanBtn.disabled = true;
 
   try {
-    const response = await fetch("https://safesphere-ai.onrender.com/api/analyze", {
+    const response = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

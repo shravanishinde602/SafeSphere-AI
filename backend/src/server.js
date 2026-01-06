@@ -10,6 +10,10 @@ const app = require("./app");
 app.use(cors());
 app.use(express.json());
 
+app.get("/health",(req,res)=>{
+  res.status(200).send("OK");
+});
+
 app.use("/api/analyze", analyzeRoutes);
 
 const PORT = process.env.PORT || 10000;
